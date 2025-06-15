@@ -1,30 +1,41 @@
-
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lahari's Birthday</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Lahari 🎉</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="password-screen">
-        <h2>Enter Password</h2>
-        <input type="password" id="password" placeholder="Enter password">
-        <button onclick="checkPassword()">Submit</button>
-        <p id="error-msg" style="color:red;"></p>
-    </div>
+  <audio autoplay loop>
+    <source src="Audio/song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-    <div id="content" style="display:none;">
-        <h1>Happy Birthday Lahari 🎉</h1>
-        <img src="images/couple.jpg" alt="Couple" width="300">
-        <p id="message">My dear Lahari, here's something special for you...</p>
-        <audio controls autoplay loop>
-            <source src="audio/music.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+  <div class="screen" id="lock-screen">
+    <h2>Enter Password</h2>
+    <input type="password" id="password" />
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="error-msg" style="color: red;"></p>
+  </div>
 
-    <script src="script.js"></script>
+  <div class="screen hidden" id="gift-screen">
+    <div id="gift-box" onclick="openGift()">
+      🎁
+    </div>
+    <div id="message" class="hidden">
+      <h1>Happy Birthday Lahari ❤️</h1>
+      <img src="Images/photo1.jpg" width="200"/>
+      <p>Click malpule baba ❤️</p>
+      <button onclick="launchRocket()">🚀</button>
+    </div>
+    <div id="final-message" class="hidden">
+      <h2>Dear Lahari,</h2>
+      <p>Your custom message from Mithesh will appear here...</p>
+      <img src="Images/photo2.jpg" width="200"/>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
